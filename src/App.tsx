@@ -1,11 +1,13 @@
-import "./App.css";
 import VideoList from "./components/VideoList";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <VideoList />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<VideoList />} />
+      </Routes>
+    </Router>
   );
 }
 

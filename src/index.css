@@ -3,5 +3,7 @@ html,
 body,
 #root {
   height: 100%;
+  background-color: #121826;
+  color: #f2f9fe;
   margin: 0 auto;
 }
