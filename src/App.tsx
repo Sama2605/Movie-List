@@ -1,4 +1,4 @@
-import VideoList from "./components/VideoList";
+import VideoList from "./pages/VideoList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

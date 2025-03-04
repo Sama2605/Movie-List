@@ -1,20 +1,8 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Movie } from "../types";
 
-interface MovieCardProps {
-  id: number;
-  title: string;
-  overview: string;
-  poster_path: string;
-  release_date: string;
-  vote_average: number;
-}
-
-const VideoCard: React.FC<MovieCardProps> = ({
-  title,
-  poster_path,
-  vote_average,
-}) => {
+const VideoCard: React.FC<Movie> = ({ title, poster_path, vote_average }) => {
   return (
     <Card className="h-full flex flex-col w-full max-w-[280px] ">
       <CardMedia
