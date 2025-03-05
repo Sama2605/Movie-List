@@ -1,10 +1,13 @@
-import { Typography, Container } from "@mui/material";
-
+import { Container } from "@mui/material";
 import useMovies from "../hooks/useMovies";
 import MovieGrid from "../components/MovieGrid";
+import MovieSearchAndFilter from "../components/MovieSearchAndFilter";
+import useSearchAndFilter from "../hooks/UseSearchAndFilter";
 
 const VideoList: React.FC = () => {
   const { movies, loading, error } = useMovies();
+  const { filteredMovies, handleSearch, handleFilter } =
+    useSearchAndFilter(movies);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -15,10 +18,8 @@ const VideoList: React.FC = () => {
   }
   return (
     <Container className="py-8">
-      <Typography variant="h4" component="h1" className="text-center mb-6">
-        Popular Movies
-      </Typography>
-      <MovieGrid movies={movies} />
+      <MovieSearchAndFilter onSearch={handleSearch} onFilter={handleFilter} />
+      <MovieGrid movies={filteredMovies} />
     </Container>
   );
 };
