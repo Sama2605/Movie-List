@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid2";
-import VideoCard from "../components/VideoCard";
+import VideoCard from "./MovieCard";
 import { Movie } from "../types";
 
 interface MovieGridProps {

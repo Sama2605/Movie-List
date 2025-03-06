@@ -4,7 +4,7 @@ import MovieGrid from "../components/MovieGrid";
 import MovieSearchAndFilter from "../components/MovieSearchAndFilter";
 import useSearchAndFilter from "../hooks/UseSearchAndFilter";
 
-const VideoList: React.FC = () => {
+const MovieList: React.FC = () => {
   const { movies, loading, error } = useMovies();
   const { filteredMovies, handleSearch, handleFilter } =
     useSearchAndFilter(movies);
@@ -24,4 +24,4 @@ const VideoList: React.FC = () => {
   );
 };
 
-export default VideoList;
+export default MovieList;

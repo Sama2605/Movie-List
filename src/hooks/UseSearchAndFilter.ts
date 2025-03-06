@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Movie } from "../types";
 
 const useSearchAndFilter = (movies: Movie[]) => {
   const [filteredMovies, setFilteredMovies] = useState<Movie[]>(movies);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedFilter, setSelectedFilter] = useState<number>(0);
+
+  useEffect(() => {
+    setFilteredMovies(movies);
+  }, [movies]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);

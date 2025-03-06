@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Movie } from "../types";
 
-const VideoCard: React.FC<Movie> = ({ title, poster_path, vote_average }) => {
+const MovieCard: React.FC<Movie> = ({ title, poster_path, vote_average }) => {
   return (
     <Card className="h-full flex flex-col w-full max-w-[280px] ">
       <CardMedia
@@ -23,4 +23,4 @@ const VideoCard: React.FC<Movie> = ({ title, poster_path, vote_average }) => {
   );
 };
 
-export default VideoCard;
+export default MovieCard;
