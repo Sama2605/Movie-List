@@ -27,6 +27,7 @@ const useMovies = () => {
     }
     getMovieData();
   }, []);
+
   return { movies, loading, error };
 };
 export default useMovies;
