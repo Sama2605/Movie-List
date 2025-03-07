@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# Movie List (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Link to the page: https://movie-list-delta-seven.vercel.app
 
-Currently, two official plugins are available:
+This project is a movie browsing application built with React, TypeScript, and Vite. It allows users to browse popular movies and search/filter videos using the TMDB API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Browse popular movies
+- View detailed information about each movie (title, rating, description, etc.)
+- Search movies by title
+- Filter movies by genre
+- Responsive design for mobile and desktop
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+⚙️ Installation
+Follow these steps to set up the project locally:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the repository:**
+   git clone https://github.com/Sama2605/Movie-List.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Install dependencies:**
+   npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Set up environment variables:**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Create a .env file in the root directory.
+- Add your TMDB API key:
+  VITE_API_KEY=your_api_key_here
+
+4. **Start the development server:**
+   npm run dev
+
+5. **Open the app in your browser:**
+   By default, Vite serves your app at: http://localhost:5173

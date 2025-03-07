@@ -12,7 +12,6 @@ const useMovies = () => {
       try {
         const data = await fetchMovieData();
         if (data) {
-          console.log(data);
           setMovies(data);
         }
       } catch (error) {
