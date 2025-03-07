@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid2";
-import VideoCard from "./MovieCard";
+import MovieCard from "./MovieCard";
 import { Movie } from "../types";
 
 interface MovieGridProps {
@@ -25,7 +25,7 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
             justifyContent: "center",
           }}
         >
-          <VideoCard {...movie} />
+          <MovieCard {...movie} />
         </Grid>
       ))}
     </Grid>
