@@ -8,7 +8,7 @@ interface BackButtonProps {
 
 const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
   return (
-    <Box className="mt-auto flex justify-end">
+    <Box className="flex justify-end">
       <Button
         onClick={onClick}
         variant="contained"

@@ -8,22 +8,12 @@ interface MovieGridProps {
 
 const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
   return (
-    <Grid
-      container
-      spacing={4}
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <Grid container spacing={4} className="flex justify-center">
       {movies.map((movie) => (
         <Grid
           key={movie.id}
           size={{ xs: 12, sm: 6, md: 4, lg: 3 }}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-          }}
+          className="flex justify-center"
         >
           <MovieCard {...movie} />
         </Grid>
@@ -31,4 +21,5 @@ const MovieGrid: React.FC<MovieGridProps> = ({ movies }) => {
     </Grid>
   );
 };
+
 export default MovieGrid;

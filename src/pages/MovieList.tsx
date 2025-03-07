@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Box, Typography, CircularProgress } from "@mui/material";
 import useMovies from "../hooks/useMovies";
 import MovieGrid from "../components/MovieGrid";
 import MovieSearchAndFilter from "../components/MovieSearchAndFilter";
@@ -9,13 +9,18 @@ const MovieList: React.FC = () => {
   const { filteredMovies, handleSearch, handleFilter } =
     useSearchAndFilter(movies);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  if (loading)
+    return (
+      <Box className="flex justify-center items-center min-h-screen">
+        <CircularProgress />
+      </Box>
+    );
+  if (error)
+    return (
+      <Typography className="text-red-500 text-center mt-6">
+        {error.message}
+      </Typography>
+    );
   return (
     <Container className="py-8">
       <MovieSearchAndFilter onSearch={handleSearch} onFilter={handleFilter} />
